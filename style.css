@@ -1,0 +1,122 @@
+:root {
+  --roxo: #2a0f5e;
+  --azul: #0b2a6f;
+  --cartao: rgba(14, 10, 40, 0.88);
+  --cartao-claro: rgba(60, 40, 130, 0.55);
+  --destaque: #ffc857;
+  --texto: #463383;
+  --texto-suave: #b4b9ee;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--texto);
+  background: linear-gradient(135deg, #1a0638 0%, var(--roxo) 30%, var(--azul) 70%, #051433 100%) fixed;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+main { flex: 1; }
+
+.navbar-estrelas {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.cartao-form,
+.cartao-signo {
+  border: 1px solid rgba(255, 200, 87, 0.25);
+  border-radius: 1.5rem;
+  background: var(--cartao);
+  color: var(--texto);
+  backdrop-filter: blur(8px);
+}
+
+.text-secondary { color: var(--texto-suave) !important; }
+
+.form-label { color: var(--texto); }
+
+.form-control {
+  background: var(--cartao-claro);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--texto);
+  color-scheme: dark;
+}
+
+.form-control:focus {
+  background: var(--cartao-claro);
+  color: var(--texto);
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 0.2rem rgba(255, 200, 87, 0.25);
+}
+
+hr { border-color: rgba(255, 255, 255, 0.3); opacity: 1; }
+
+.btn-estrela {
+  background: linear-gradient(135deg, var(--destaque), #ff9f43);
+  border: 0;
+  color: #1b1035;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-estrela:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 159, 67, 0.45);
+  color: #1b1035;
+}
+
+.simbolo-grande {
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--destaque);
+  text-shadow: 0 0 25px rgba(255, 200, 87, 0.45);
+}
+
+.info-item {
+  background: var(--cartao-claro);
+  border-radius: 0.9rem;
+  padding: 0.8rem 1rem;
+  height: 100%;
+}
+
+.info-item small {
+  display: block;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+}
+
+.etiqueta {
+  background: rgba(255, 200, 87, 0.15);
+  border: 1px solid rgba(255, 200, 87, 0.5);
+  color: var(--destaque);
+  font-weight: 500;
+  margin: 0 0.35rem 0.4rem 0;
+  padding: 0.5em 0.9em;
+}
+
+.mini-signo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 0.8rem 0.4rem;
+  text-align: center;
+  color: var(--texto-suave);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.mini-signo:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mini-signo .simbolo {
+  display: block;
+  font-size: 2rem;
+  color: var(--destaque);
+}
+
+.rodape { color: var(--texto-suave); opacity: 0.8; }
